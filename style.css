@@ -1,0 +1,58 @@
+/*
+ Theme Name: Twenty Seventeen Child
+ Description: The custom theme My Child Theme using the parent theme Twenty Seventeen.
+ Author: Edmand Cheung
+ Author URI: http://localhost/wordpress3/
+ Template: twentyseventeen
+ Version: 1.0.4
+ */
+
+ /* Site Title */
+
+.site-title 
+{
+    font-size: 6.75em;
+    line-height: 1.3;
+    color: #c92a54;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Main Content Width */
+
+.site-content
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Website Summary */
+
+.website-summary
+{
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Summary Heading */
+
+.website-summary h2
+{
+    font-size: 2.5em;
+    color: #39ff14 !important;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Summary Paragraph */
+
+.website-summary p
+{
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
