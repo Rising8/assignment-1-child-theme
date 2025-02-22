@@ -56,3 +56,59 @@
     color: #333;
     text-align: center;
 }
+
+/* Gaming Team Header Bigger */
+
+.page-header .page-title
+{
+    font-size: 3em;
+    color: #39ff14 !important;
+    text-transform: uppercase;
+}
+
+/* Header Description Styling */
+
+.header-description
+{
+    font-size: 1.2em;
+    color: #0ba2d9;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Players List */
+
+.players-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Individual Player Styling */
+
+.player
+{
+    text-align: center;
+    max-width: 150px;
+}
+
+/* Player Name Styling */
+
+.player-name
+{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Player Image Styling */
+
+.player-image
+{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 300px;
+}

@@ -24,6 +24,35 @@ get_header(); ?>
 		</header>
 	<?php else : ?>
 	<header class="page-header">
+
+        <!-- Summary -->
+        <div class = "website-summary">
+            <h2>GameZoneX Overview</h2>
+            <p>Our gaming team is dedicated to competing at the highest levels in esports. We also have a diverse group of players with different skills and playstyles, constantly looking to improve and expand our team to win tournaments, big or small. We have created a community where the opportunities are endless and everyone is allowed to join regardless of skill levels.</p>
+        </div>
+
+		<h2 class="page-title"><?php _e( 'Gaming Team', 'twentyseventeen' ); ?></h2>
+
+		<!-- Players Section -->
+        <div class = "players-list">
+            <h3>Meet our Professional Players</h3>
+            <div class = "player">
+                <img src = "https://img.freepik.com/free-photo/hispanic-teenager-playing-video-game-holding-controller-relaxed-with-serious-expression-face-simple-natural-looking-camera_839833-3187.jpg" alt = "Player 1" class = "player-image">
+                <p class = "player-name">Jeff Hamilton</p>
+            </div>
+            <div class = "player">
+                <img src = "https://thumbs.dreamstime.com/b/arabic-guy-gamer-taking-selfie-video-call-friends-showing-victory-sign-winning-game-copy-space-arabic-guy-gamer-284866091.jpg" alt = "Player 2" class = "player-image">
+                <p class = "player-name">Blake Conroy</p>
+            </div>
+            <div class = "player">
+                <img src = "https://thumbs.dreamstime.com/b/streamer-young-man-professional-gamer-playing-online-games-computer-headphones-make-selfie-photo-neon-color-243511228.jpg" alt = "Player 3" class = "player-image">
+                <p class = "player-name"> Jake McDonald</p>
+            </div>
+        </div>
+		
+		</header>
+	<?php else : ?>
+	<header class="page-header">
 		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
 	</header>
 	<?php endif; ?>
