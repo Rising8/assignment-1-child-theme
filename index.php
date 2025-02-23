@@ -33,7 +33,7 @@ get_header(); ?>
 
 		<h2 class="page-title"><?php _e( 'Gaming Team', 'twentyseventeen' ); ?></h2>
 
-		<!-- Players Section -->
+        <!-- Players Section -->
         <div class = "players-list">
             <h3>Meet our Professional Players</h3>
             <div class = "player">
@@ -49,11 +49,45 @@ get_header(); ?>
                 <p class = "player-name"> Jake McDonald</p>
             </div>
         </div>
-		
-		</header>
-	<?php else : ?>
-	<header class="page-header">
-		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
+
+        <!-- Community Link -->
+        <p class = "header-description"> Join our gaming community for the latest updates, tips and gaming news!
+        <a href = "https://discord.gg/j1H6P4xw" class = "discord-link">https://discord.gg/j1H6P4xw</a></p>
+
+        <!-- Events/Tournaments Section -->
+        <div class = "events-section">
+            <h2 class = "events-title">Upcoming Events/Tournaments</h2>
+            <p class = "events-description">Stay tuned for upcoming events and tournaments!</p>
+
+            <!-- Event 1 --> 
+            <div class = "event">
+                <h3 class = "event-title"> Exo Tournament</h3>
+                <p class = "event-date">Date: March 8, 2025</p>
+                <p class = "event-details">Details: A thrilling tournament for all skill levels!</p>
+            </div>
+
+            <!-- Event 2 --> 
+            <div class = "event">
+                <h3 class = "event-title"> Brittania Event</h3>
+                <p class = "event-date">Date: May 1, 2025</p>
+                <p class = "event-details">Details: All skill levels invited! $500 in prizes to win!</p>
+            </div>
+
+            <!-- Event 3 --> 
+            <div class = "event">
+                <h3 class = "event-title"> Corpse Event</h3>
+                <p class = "event-date">Date: June 29, 2025</p>
+                <p class = "event-details">Details: A special gaming event with $5000 in prizes to win!</p>
+            </div>
+
+            <!-- Event 4 --> 
+            <div class = "event">
+                <h3 class = "event-title"> Mid Season Tournament</h3>
+                <p class = "event-date">Date: August 13, 2025</p>
+                <p class = "event-details">Details: World Gaming Cup qualifiers!</p>
+            </div>
+        </div>
+            
 	</header>
 	<?php endif; ?>
 
@@ -90,7 +124,7 @@ get_header(); ?>
 
 			else :
 
-				get_template_part( 'template-parts/post/content', 'none' );
+                // Nothing Happens
 
 			endif;
 			?>
