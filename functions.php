@@ -15,3 +15,11 @@ function my_theme_enqueue_styles()
 }
 /* Action Hooks */
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+/* Customize the Footer */
+
+function custom_footer()
+{
+    echo '<p style = "text-align:center; font-size:14px;">&copy; ' . date("Y") . ' - Custom Footer for Twenty Seventeen Child.</p';
+}
+add_action('wp_footer', 'custom_footer');

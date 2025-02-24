@@ -211,3 +211,76 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
+
+/* Footers */
+
+.site-footer
+{
+    background-color: #222;
+    color: rgb(233, 177, 8);
+    padding: 40x 20x;
+    text-align: center;
+}
+
+.footer1-social-media, .footer2-contact-info
+{
+    margin-bottom: 30px;
+}
+
+/* Footer Section Heading */
+
+footer h3
+{
+    font-size: 24px;
+    color: #0bf6b3 !important;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Social Media Links List */
+.footer1-social-media u1
+{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Social Media Links */
+
+.footer1-social.media a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer1-social-media a:hover 
+{
+    color: #f4c10a !important;
+}
+
+/* Footer Contact Info */
+
+.footer2-contact-info p
+{
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Contact Info Links */
+
+.footer2-contact-info a
+{
+    color: rgb(233, 177, 8);
+    text-decoration: none;
+}
+
+.footer2-contact-info a:hover 
+{
+    text-decoration: underline; 
+}
+
