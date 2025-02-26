@@ -38,8 +38,14 @@ function custom_sidebar()
         'after_title'   => '</h3>',
     ));
 
+    /* Custom Search Widget with Accessibility Improvements */
+
     echo '<div class = "custom-widget-search">';
-    get_search_form();
+    echo '<form role = "search" method = "get" id = "searchform" action = "' . home_url( '/') . '" aria-label = "Search">';
+    echo '<label for = "searc-input" class = "screen-reader-text">Search</label>'; // label for screen readers
+    echo '<input type = "search" id = "search-input" class = "search-field" placeholder = "Search..." value = "' . get_search_query() . '" name = "s" />';
+    echo '<button type = "submit" class = "search-submit">Search</button>';
+    echo '</form>';
     echo '</div>';
 }
 /* Action Hooks */
