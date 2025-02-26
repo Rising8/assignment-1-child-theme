@@ -300,8 +300,29 @@ footer h3
     background-color: #222;
     color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style individual widgets inside the sidebar */
+
+.custom-widget 
+{
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style Widget Titles */
+
+.custom-widget-title
+{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00ff00;
+    margin-bottom: 10px;
 }
 
 /* Styling Search Bar widget */
@@ -313,9 +334,12 @@ footer h3
     right: 20px;
     z-index: 9999;
     background-color: white;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
 }
 
 /* Search Form Styling */
@@ -337,6 +361,7 @@ footer h3
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 10px;
+    box-sizing: border-box;
 }
 
 /* Search Button Styling */
@@ -357,6 +382,17 @@ footer h3
     transform: scale(1.05);
     transition: all 0.3s ease-in-out; 
 }
+
+/* Hover effect for widgets */
+
+.custom-widget:hover
+{
+    background-color: #444;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
 
 /* Styling the Calendar widget */
 
