@@ -7,7 +7,7 @@
  Version: 1.0.4
  */
 
- /* Site Title */
+/* Site Title */
 
 .site-title 
 {
@@ -200,7 +200,7 @@
 {
     font-size: 1.25em;
     color: #222;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 
 }
 
@@ -238,7 +238,7 @@ footer h3
 }
 
 /* Social Media Links List */
-.footer1-social-media u1
+.footer1-social-media ul
 {
     list-style-type: none;
     padding-left: 0;
@@ -249,7 +249,7 @@ footer h3
 
 /* Social Media Links */
 
-.footer1-social.media a
+.footer1-social-media a
 {
     text-decoration: none;
     color: #fff;
@@ -297,10 +297,11 @@ footer h3
 
 .widget-area
 {
-    background-color: #f329a5;
+    background-color: #222;
+    color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Styling Search Bar widget */
@@ -352,7 +353,9 @@ footer h3
 
 .custom-widget-search button:hover
 {
-    background-color: #005177; 
+    background-color: #ff4081;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out; 
 }
 
 /* Styling the Calendar widget */
