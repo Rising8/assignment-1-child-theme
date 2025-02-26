@@ -23,3 +23,32 @@ function custom_footer()
     echo '<p style = "text-align:center; font-size:14px;">&copy; ' . date("Y") . ' - Custom Footer for Twenty Seventeen Child.</p';
 }
 add_action('wp_footer', 'custom_footer');
+
+/* Custom Sidebar Widget - This is widgets */
+
+function custom_sidebar()
+{
+    register_sidebar( array(
+        'name'          => __('Custom Sidebar', 'twentyseventeen-child'),
+        'id'            => 'custom-sidebar',
+        'description'   => __('A sidebar for twentyseventeen child.', 'twnetyseventeen-child'),
+        'before_widget' => '<div class="custom-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class = "custom-widget-title">',
+        'after_title'   => '</h3>',
+    ));
+
+    echo '<div class = "custom-widget-search">';
+    get_search_form();
+    echo '</div>';
+}
+/* Action Hooks */
+add_action('widgets_init', 'custom_sidebar');
+
+/* Modifying Widget Titles - Filter for widget titles */
+
+function custom_widget_titles($title)
+{
+    return '<span class = "custom-widget-style">' . $title . '</span';
+}
+add_filter('widget_title', 'custom_widget_titles');

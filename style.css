@@ -284,3 +284,83 @@ footer h3
     text-decoration: underline; 
 }
 
+/* Sidebar Widgets */
+
+.custom-widget-style
+{
+    color: #00ff00 !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Widget Area (social media/contact info) */
+
+.widget-area
+{
+    background-color: #f329a5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling Search Bar widget */
+
+.custom-widget-search
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Form Styling */
+
+.custom-widget-search form
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Search Input Field Styling */
+
+.custom-widget-search input[type="search"]
+{
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Search Button Styling */
+
+.custom-widget-search button
+{
+    padding: 10px 15px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-widget-search button:hover
+{
+    background-color: #005177; 
+}
+
+/* Styling the Calendar widget */
+
+.wp-block-calendar
+{
+    background-color: #0aeea5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
