@@ -38,6 +38,14 @@ function custom_sidebar()
         'after_title'   => '</h3>',
     ));
 
+    /* Custom Quote of the Day Widget */
+    if (is_front_page())
+    {
+        echo '<div class = "quote-of-the-day-widget">';
+        quote_of_the_day();
+        echo '</div>';
+    }
+
     /* Custom Search Widget with Accessibility Improvements */
 
     echo '<div class = "custom-widget-search">';
@@ -51,10 +59,33 @@ function custom_sidebar()
 /* Action Hooks */
 add_action('widgets_init', 'custom_sidebar');
 
-/* Modifying Widget Titles - Filter for widget titles */
+/* Modifying Widget Titles - Filter for widget titles 
+It allows to easily customize the apperance of widget titles across the whole site without manually editing each widget.
+You can control it by modifying the CSS for .custom-widget-style in style.css */
 
 function custom_widget_titles($title)
 {
     return '<span class = "custom-widget-style">' . $title . '</span>';
 }
 add_filter('widget_title', 'custom_widget_titles');
+
+/* Custom Widget - Quote of the Day! */
+
+function quote_of_the_day()
+{
+    $quotes = array(
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "It does not matter how slowly you go, as long as you do not stop. - Confucius",
+        "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+        "A journey of a thousand miles begins with a single step - Lao Tzu",
+        "You miss 100% of the shots you don't take. - Wayne Gretzky",
+        "Life is what happens when you're busy making other plans. - John Lennon"
+    );
+
+    $random_quote = $quotes[array_rand($quotes)];
+
+    echo '<div class = "quote_of_the_day">';
+    echo '<h3>Quote of the day!</h3>';
+    echo '<p>"' . esc_html($random_quote) . '"</p>';
+    echo '</div>';
+}

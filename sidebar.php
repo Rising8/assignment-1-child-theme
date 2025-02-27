@@ -7,6 +7,12 @@
  * @package Twenty_Seventeen_Child
  */
 
+if (is_front_page()):
+    echo '<aside id = "quote-of-the-day" class = "widget-area">';
+    quote_of_the_day();
+    echo '</aside><!--#quote of the day -->';
+endif;
+
 /* Checks if the custom-sidebar has active widgets */
 if ( is_active_sidebar( 'custom-sidebar' ) ) :
 ?>
