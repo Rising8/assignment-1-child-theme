@@ -27,8 +27,8 @@ get_header(); ?>
 
         <!-- Summary -->
         <div class = "website-summary">
-            <h2>GameZoneX Overview</h2>
-            <p>Our gaming team is dedicated to competing at the highest levels in esports. We also have a diverse group of players with different skills and playstyles, constantly looking to improve and expand our team to win tournaments, big or small. We have created a community where the opportunities are endless and everyone is allowed to join regardless of skill levels.</p>
+            <h2><?php echo get_the_title( get_page_by_path( 'gamezonex-overview' ) ); ?></h2>
+            <p><?php echo get_post_field( 'post_content', get_page_by_path( 'gamezonex-overview' ) ); ?></p>
         </div>
 
 		<h2 class="page-title"><?php _e( 'Gaming Team', 'twentyseventeen' ); ?></h2>
@@ -49,44 +49,59 @@ get_header(); ?>
                 <p class = "player-name"> Jake McDonald</p>
             </div>
         </div>
-
+        
         <!-- Community Link -->
         <p class = "header-description"> Join our gaming community for the latest updates, tips and gaming news!
         <a href = "https://discord.gg/j1H6P4xw" class = "discord-link">https://discord.gg/j1H6P4xw</a></p>
 
-        <!-- Events/Tournaments Section -->
-        <div class = "events-section">
-            <h2 class = "events-title">Upcoming Events/Tournaments</h2>
-            <p class = "events-description">Stay tuned for upcoming events and tournaments!</p>
+        <div class="events-section">
+            <h2 class="events-title">Upcoming Events/Tournaments</h2>
+            <p class="events-description">Stay tuned for upcoming events and tournaments!</p>
 
-            <!-- Event 1 --> 
-            <div class = "event">
-                <h3 class = "event-title"> Exo Tournament</h3>
-                <p class = "event-date">Date: March 8, 2025</p>
-                <p class = "event-details">Details: A thrilling tournament for all skill levels!</p>
+            <!-- Event 1 -->
+            <div class="event">
+                <button class="event-title" onclick="toggleEventDetails(this)">
+                    <h3>Exo Tournament</h3>
+                </button>
+                <div class="event-details" style="display:none;">
+                    <p class="event-date">Date: March 8, 2025</p>
+                    <p>Details: A thrilling tournament for all skill levels!</p>
+                </div>
             </div>
 
-            <!-- Event 2 --> 
-            <div class = "event">
-                <h3 class = "event-title"> Brittania Event</h3>
-                <p class = "event-date">Date: May 1, 2025</p>
-                <p class = "event-details">Details: All skill levels invited! $500 in prizes to win!</p>
+            <!-- Event 2 -->
+            <div class="event">
+                <button class="event-title" onclick="toggleEventDetails(this)">
+                    <h3>Brittania Event</h3>
+                </button>
+                <div class="event-details" style="display:none;">
+                    <p class="event-date">Date: May 1, 2025</p>
+                    <p>Details: All skill levels invited! $500 in prizes to win!</p>
+                </div>
             </div>
 
-            <!-- Event 3 --> 
-            <div class = "event">
-                <h3 class = "event-title"> Corpse Event</h3>
-                <p class = "event-date">Date: June 29, 2025</p>
-                <p class = "event-details">Details: A special gaming event with $5000 in prizes to win!</p>
+            <!-- Event 3 -->
+            <div class="event">
+                <button class="event-title" onclick="toggleEventDetails(this)">
+                    <h3>Corpse Event</h3>
+                </button>
+                <div class="event-details" style="display:none;">
+                    <p class="event-date">Date: June 29, 2025</p>
+                    <p>Details: A special gaming event with $5000 in prizes to win!</p>
+                </div>
             </div>
 
-            <!-- Event 4 --> 
-            <div class = "event">
-                <h3 class = "event-title"> Mid Season Tournament</h3>
-                <p class = "event-date">Date: August 13, 2025</p>
-                <p class = "event-details">Details: World Gaming Cup qualifiers!</p>
+            <!-- Event 4 -->
+            <div class="event">
+                <button class="event-title" onclick="toggleEventDetails(this)">
+                    <h3>Mid Season Tournament</h3>
+                </button>
+                <div class="event-details" style="display:none;">
+                    <p class="event-date">Date: August 13, 2025</p>
+                    <p>Details: World Gaming Cup qualifiers!</p>
+                </div>
             </div>
-        </div>
+        </div> 
             
 	</header>
 	<?php endif; ?>
@@ -133,6 +148,17 @@ get_header(); ?>
 	</div><!-- #primary -->
 	<?php get_sidebar(); ?>
 </div><!-- .wrap -->
+
+<script>
+    function toggleEventDetails(button) {
+        var eventDetails = button.nextElementSibling; // Get the div containing event details
+        if (eventDetails.style.display === "none" || eventDetails.style.display === "") {
+            eventDetails.style.display = "block"; // Show event details
+        } else {
+            eventDetails.style.display = "none"; // Hide event details
+        }
+    }
+</script>
 
 <?php
 get_footer();

@@ -9,7 +9,7 @@
 
 /* Site Title */
 
-.site-title
+.site-title 
 {
     font-size: 6.75em;
     line-height: 1.3;
@@ -178,38 +178,27 @@
 
 /* Individual Event Title */
 
-.event-title
-{
-    font-size: 2em;
-    color: #FF00FF !important;
-    margin-bottom: 10px;
+.event-title {
+    background-color: #f4f4f4;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-/* Individual Event Date */
-
-.event-date
-{
-    font-size: 1.25em;
-    color:#222;
-    margin-bottom: 10px;
+.event-title:hover {
+    background-color: #ddd;
 }
 
-/* Individual Event Detail */
-
-.event-details
-{
-    font-size: 1.25em;
-    color: #222;
-    margin-bottom: 10px;
-
-}
-
-.event:hover
-{
-    background-color: #fafafa;
-    border-color: #ccc;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+.event-details {
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: none; /* Start hidden */
 }
 
 /* Footers */
