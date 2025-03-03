@@ -409,3 +409,104 @@
     border-radius: 8px;
     margin-bottom: 15px;
 }
+
+/* Mobile Devices Queries */
+
+@media (max-width: 600px)
+{
+    .site-title
+    {
+        font-size: 4em;
+    }
+
+    .website-summary
+    {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .website-summary h2
+    {
+        font-size: 2em;
+    }
+
+    .website-summary p
+    {
+        font-size: 1em;
+    }
+
+    .page-header .page-title
+    {
+        font-size: 2em;
+    }
+
+    .header-description
+    {
+        font-size: 1em;
+    }
+
+    .players-list
+    {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .player
+    {
+        max-width: 100%;
+    }
+
+    .events-section
+    {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .events-title
+    {
+        font-size: 2em;
+    }
+    
+    .events-description
+    {
+        font-size: 1em;
+    }
+
+    .event 
+    {
+        padding: 15px;
+    }
+
+    .event-title
+    {
+        font-size: 14px;
+    }
+
+    .site-footer
+    {
+        padding: 20px 10px;
+    }
+
+    .footer1-social-media ul
+    {
+        flex-direction: column;
+    }
+
+    .footer1-social-media a 
+    {
+        font-size: 14px;
+    }
+
+    .custom-widget-search
+    {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .custom-widget-search input[type="search"]
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+}
