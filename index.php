@@ -25,7 +25,7 @@ get_header(); ?>
 	<?php else : ?>
 	<header class="page-header">
 
-        <!-- Summary -->
+        <!-- Website Summary Section -->
         <div class = "website-summary">
             <h2><?php echo get_the_title( get_page_by_path( 'gamezonex-overview' ) ); ?></h2>
             <p><?php echo get_post_field( 'post_content', get_page_by_path( 'gamezonex-overview' ) ); ?></p>
@@ -50,7 +50,7 @@ get_header(); ?>
             </div>
         </div>
         
-        <!-- Community Link -->
+        <!-- Community Link Section -->
         <p class = "header-description"> Join our gaming community for the latest updates, tips and gaming news!
         <a href = "https://discord.gg/j1H6P4xw" class = "discord-link">https://discord.gg/j1H6P4xw</a></p>
 
@@ -126,6 +126,7 @@ get_header(); ?>
 
 				endwhile;
 
+                /* Pagination for posts */
 				the_posts_pagination(
 					array(
 						/* translators: Hidden accessibility text. */
@@ -139,7 +140,8 @@ get_header(); ?>
 
 			else :
 
-                // Nothing Happens
+                // Message for when no posts are available 
+                echo '<p>No posts are available.</p>';
 
 			endif;
 			?>
@@ -150,11 +152,16 @@ get_header(); ?>
 </div><!-- .wrap -->
 
 <script>
-    function toggleEventDetails(button) {
+    /* Toggles visibility of event details when the button is clicked */
+    function toggleEventDetails(button) 
+    {
         var eventDetails = button.nextElementSibling; // Get the div containing event details
-        if (eventDetails.style.display === "none" || eventDetails.style.display === "") {
+        if (eventDetails.style.display === "none" || eventDetails.style.display === "") 
+        {
             eventDetails.style.display = "block"; // Show event details
-        } else {
+        } 
+        else 
+        {
             eventDetails.style.display = "none"; // Hide event details
         }
     }
