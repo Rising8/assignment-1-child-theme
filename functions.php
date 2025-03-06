@@ -1,9 +1,8 @@
 <?php
 
-//*********Instead of @import Use enqueue as recommended by WordPress Codex **********/
+// ********* Instead of @import Use enqueue as recommended by WordPress Codex **********/
 
 /* Enqueue parent and child theme styles */
-
 function my_theme_enqueue_styles() 
 { 
     $parent_style = 'parent-style'; // This is 'twentyseventeen-style' for the Twenty Seventeen theme.
@@ -15,85 +14,80 @@ function my_theme_enqueue_styles()
         wp_get_theme()->get('Version')
     );
 }
-/* Action Hooks */
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 /* Customize the Footer - Adding custom footer text */
-
-function custom_footer()
-{
-    echo '<p style = "text-align:center; font-size:14px;">&copy; ' . date("Y") . ' - Custom Footer for Twenty Seventeen Child.</p>';
+function custom_footer() {
+    echo '<p class="custom-footer">&copy; ' . date("Y") . ' - Custom Footer for Twenty Seventeen Child.</p>';
 }
 add_action('wp_footer', 'custom_footer');
 
-/* Custom Sidebar Widget - Register sidebar and widget functionality */
-
-function custom_sidebar()
-{
-    /* Register custom sidebar */
+/* Register sidebar */
+function custom_sidebar() {
     register_sidebar( array(
         'name'          => __('Custom Sidebar', 'twentyseventeen-child'),
         'id'            => 'custom-sidebar',
-        'description'   => __('A sidebar for twentyseventeen child.', 'twentyseventeen-child'),
+        'description'   => __('A sidebar for Twenty Seventeen Child.', 'twentyseventeen-child'),
         'before_widget' => '<div class="custom-widget">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h3 class = "custom-widget-title">',
+        'before_title'  => '<h3 class="custom-widget-title">',
         'after_title'   => '</h3>',
     ));
+}
+add_action('widgets_init', 'custom_sidebar');
 
-    /* Custom Quote of the Day Widget on the front page */
-    if (is_front_page())
-    {
-        echo '<div class = "quote-of-the-day-widget">';
+/* Display Quote of the Day Widget */
+function display_quote_widget() {
+    if (is_front_page()) {
+        echo '<div class="quote-of-the-day-widget">';
         quote_of_the_day();
         echo '</div>';
     }
-
-    /* Custom Search Widget with Accessibility Improvements */
-
-    echo '<div class = "custom-widget-search">';
-    echo '<form role = "search" method = "get" id = "searchform" action = "' . home_url( '/') . '" aria-label = "Search">';
-    echo '<label for = "search-input" class = "screen-reader-text">Search</label>'; // label for screen readers
-    echo '<input type = "search" id = "search-input" class = "search-field" placeholder = "Search..." value = "' . get_search_query() . '" name = "s" />';
-    echo '<button type = "submit" class = "search-submit">Search</button>';
-    echo '</form>';
-    echo '</div>';
 }
-/* Action Hooks: hook the sidebar registration function to widgets_init action */
-add_action('widgets_init', 'custom_sidebar');
+add_action('wp_sidebar', 'display_quote_widget'); 
 
-/* Modifying Widget Titles - Filter for widget titles 
-It allows to easily customize the apperance of widget titles across the whole site without manually editing each widget.
-You can control it by modifying the CSS for .custom-widget-style in style.css */
-
-function custom_widget_titles($title)
-{
-    /* Custom widget class for styling purposes */
-    return '<span class = "custom-widget-style">' . $title . '</span>';
+/* Modify Widget Titles */
+function custom_widget_titles($title) {
+    return '<span class="custom-widget-style">' . esc_html($title) . '</span>';
 }
-/* Hooks the widget title customization to widget_title function */
 add_filter('widget_title', 'custom_widget_titles');
 
-/* Custom Widget - Quote of the Day! */
-
-function quote_of_the_day()
-{
-    /* Array of quotes for the quote of the day widget */
+/* Custom Widget - Quote of the Day */
+function quote_of_the_day() {
     $quotes = array(
         "The only way to do great work is to love what you do. - Steve Jobs",
         "It does not matter how slowly you go, as long as you do not stop. - Confucius",
         "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
-        "A journey of a thousand miles begins with a single step - Lao Tzu",
+        "A journey of a thousand miles begins with a single step. - Lao Tzu",
         "You miss 100% of the shots you don't take. - Wayne Gretzky",
         "Life is what happens when you're busy making other plans. - John Lennon"
     );
 
-    /* Gets a random quote from the array */
-    $random_quote = $quotes[array_rand($quotes)];
+    $random_quote = esc_html($quotes[array_rand($quotes)]);
 
-    /* Displays the quote */
-    echo '<div class = "quote_of_the_day">';
-    echo '<h3>Quote of the day!</h3>';
-    echo '<p>"' . esc_html($random_quote) . '"</p>';
+    echo '<div class="quote_of_the_day">';
+    echo '<h3>Quote of the Day!</h3>';
+    echo '<p>"' . $random_quote . '"</p>';
     echo '</div>';
 }
+
+/* GameZoneX Overview Text Function */
+function get_gamezonex_overview() {
+    return 'Our gaming team is dedicated to competing at the highest levels in esports. 
+            We also have a diverse group of players with different skills and playstyles, 
+            constantly looking to improve and expand our team to win tournaments, big or small. 
+            We have created a community where the opportunities are endless, 
+            and everyone is allowed to join regardless of skill level.';
+}
+
+function my_theme_widgets_init() {
+    register_sidebar( array(
+        'name'          => 'Sidebar Calendar Widget',
+        'id'            => 'sidebar-calendar',
+        'before_widget' => '<div class="custom-widget widget-calendar">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="custom-widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'my_theme_widgets_init' );

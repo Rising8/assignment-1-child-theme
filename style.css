@@ -352,6 +352,8 @@
     cursor: pointer;
 }
 
+/* Search Button Hover Styling */
+
 .custom-widget-search button:hover
 {
     background-color: #ff4081;
@@ -369,14 +371,35 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Styling the Calendar widget */
+/* Ensure the calendar widget is always visible */
 
-.wp-block-calendar
+.widget-calendar 
 {
     background-color: #0aeea5;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    min-height: 200px; /* Ensures it always has space */
+}
+
+/* Adjust calendar title styling */
+
+.widget-calendar h2 
+{
+    font-size: 1.8em;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Ensure calendar is always displayed in the sidebar */
+
+.sidebar-calendar 
+{
+    display: block !important;
+    width: 100%;
 }
 
 /* Quote of the Day Widget Styling */
