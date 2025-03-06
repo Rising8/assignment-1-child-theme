@@ -26,15 +26,13 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content">
-		<?php
-		/* translators: Hidden accessibility text. */
-		_e( 'Skip to content', 'twentyseventeen' );
-		?>
+		<?php _e( 'Skip to content', 'twentyseventeen' ); ?>
 	</a>
 
 	<header id="masthead" class="site-header">
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+		<!-- Custom Background Image -->
+		<div class="custom-header-background"></div>
 
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<div class="navigation-top">
@@ -44,15 +42,26 @@
 			</div><!-- .navigation-top -->
 		<?php endif; ?>
 
-	</header><!-- #masthead -->
+		<!-- Custom Search Bar -->
+		<div class="custom-widget-search">
+			<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<input type="search" name="s" placeholder="Search..." />
+				<button type="submit">🔍</button>
+			</form>
+		</div>
 
-	<?php
-	if ( twentyseventeen_should_show_featured_image() ) :
-		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
+	</header><!-- #masthead -->
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
+
+<style>
+.custom-header-background {
+    background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/67335E43-16CE-4F72-9246-4242C7023DB3.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+}
+</style>
