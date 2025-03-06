@@ -18,41 +18,37 @@
 get_header(); ?>
 
 <div class="wrap">
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header class="page-header">
-			<h1 class="page-title"><?php single_post_title(); ?></h1>
-		</header>
-	<?php else : ?>
 	<header class="page-header">
+		<h1 class="page-title">GameZoneX</h1> <!-- Fixed Page Title -->
 
         <!-- Website Summary Section -->
-        <div class = "website-summary">
-            <h2><?php echo get_the_title( get_page_by_path( 'gamezonex-overview' ) ); ?></h2>
-            <p><?php echo get_post_field( 'post_content', get_page_by_path( 'gamezonex-overview' ) ); ?></p>
+        <div class="website-summary">
+            <h2>GameZoneX Overview</h2>
+            <p>Our gaming team is dedicated to competing at the highest levels in esports. We also have a diverse group of players with different skills and playstyles, constantly looking to improve and expand our team to win tournaments, big or small. We have created a community where the opportunities are endless and everyone is allowed to join regardless of skill levels.</p>
         </div>
 
 		<h2 class="page-title"><?php _e( 'Gaming Team', 'twentyseventeen' ); ?></h2>
 
         <!-- Players Section -->
-        <div class = "players-list">
+        <div class="players-list">
             <h3>Meet our Professional Players</h3>
-            <div class = "player">
-                <img src = "https://img.freepik.com/free-photo/hispanic-teenager-playing-video-game-holding-controller-relaxed-with-serious-expression-face-simple-natural-looking-camera_839833-3187.jpg" alt = "Player 1" class = "player-image">
-                <p class = "player-name">Jeff Hamilton</p>
+            <div class="player">
+                <img src="https://img.freepik.com/free-photo/hispanic-teenager-playing-video-game-holding-controller-relaxed-with-serious-expression-face-simple-natural-looking-camera_839833-3187.jpg" alt="Player 1" class="player-image">
+                <p class="player-name">Jeff Hamilton</p>
             </div>
-            <div class = "player">
-                <img src = "https://thumbs.dreamstime.com/b/arabic-guy-gamer-taking-selfie-video-call-friends-showing-victory-sign-winning-game-copy-space-arabic-guy-gamer-284866091.jpg" alt = "Player 2" class = "player-image">
-                <p class = "player-name">Blake Conroy</p>
+            <div class="player">
+                <img src="https://thumbs.dreamstime.com/b/arabic-guy-gamer-taking-selfie-video-call-friends-showing-victory-sign-winning-game-copy-space-arabic-guy-gamer-284866091.jpg" alt="Player 2" class="player-image">
+                <p class="player-name">Blake Conroy</p>
             </div>
-            <div class = "player">
-                <img src = "https://thumbs.dreamstime.com/b/streamer-young-man-professional-gamer-playing-online-games-computer-headphones-make-selfie-photo-neon-color-243511228.jpg" alt = "Player 3" class = "player-image">
-                <p class = "player-name"> Jake McDonald</p>
+            <div class="player">
+                <img src="https://thumbs.dreamstime.com/b/streamer-young-man-professional-gamer-playing-online-games-computer-headphones-make-selfie-photo-neon-color-243511228.jpg" alt="Player 3" class="player-image">
+                <p class="player-name">Jake McDonald</p>
             </div>
         </div>
         
         <!-- Community Link Section -->
-        <p class = "header-description"> Join our gaming community for the latest updates, tips and gaming news!
-        <a href = "https://discord.gg/j1H6P4xw" class = "discord-link">https://discord.gg/j1H6P4xw</a></p>
+        <p class="header-description">Join our gaming community for the latest updates, tips, and gaming news!
+        <a href="https://discord.gg/j1H6P4xw" class="discord-link">https://discord.gg/j1H6P4xw</a></p>
 
         <div class="events-section">
             <h2 class="events-title">Upcoming Events/Tournaments</h2>
@@ -102,9 +98,7 @@ get_header(); ?>
                 </div>
             </div>
         </div> 
-            
 	</header>
-	<?php endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -169,3 +163,4 @@ get_header(); ?>
 
 <?php
 get_footer();
+?>
