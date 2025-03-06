@@ -1,49 +1,51 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.2
- */
+</div><!-- #content -->
 
-?>
+<footer id="colophon" class="site-footer">
+    <div class="wrap">
 
-		</div><!-- #content -->
+        <!-- Footer Container (Flexbox) -->
+        <div class="footer-container">
+            <!-- Footer 1: Social Media Links -->
+            <div class="footer1-social-media">
+                <h3>Social Media Links</h3>
+                <ul>
+                    <li><a href="https://facebook.com/testingprofile1" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com/testingprofile2" target="_blank">Instagram</a></li>
+                    <li><a href="https://discord.com/testingprofile1" target="_blank">Discord</a></li>
+                    <li><a href="https://twitter.com/testingprofile3" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
 
-		<footer id="colophon" class="site-footer">
-			<div class="wrap">
-				<?php
-				get_template_part( 'template-parts/footer/footer', 'widgets' );
+            <!-- Footer 2: Contact Information -->
+            <div class="footer2-contact-info">
+                <h3>Contact Information</h3>
+                <p>Contact Us: <a href="mailto:gaminginquiries@gamezonex.com">gaminginquiries@gamezonex.com</a></p>
+                <p>Phone: (61) 413 847 123</p>
+                <p>Address: 123 Gaming St, Perth, Australia</p>
+            </div>
+        </div>
 
-				if ( has_nav_menu( 'social' ) ) :
-					?>
-					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
-						<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'social',
-									'menu_class'     => 'social-links-menu',
-									'depth'          => 1,
-									'link_before'    => '<span class="screen-reader-text">',
-									'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
-								)
-							);
-						?>
-					</nav><!-- .social-navigation -->
-					<?php
-				endif;
+        <?php
+        get_template_part( 'template-parts/footer/footer', 'widgets' );
 
-				get_template_part( 'template-parts/footer/site', 'info' );
-				?>
-			</div><!-- .wrap -->
-		</footer><!-- #colophon -->
-	</div><!-- .site-content-contain -->
+        if ( has_nav_menu( 'social' ) ) :
+        ?>
+            <nav class="social-navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'social',
+                        'menu_class'     => 'social-links-menu',
+                        'depth'          => 1,
+                        'link_before'    => '<span class="'
+                    )
+                );
+                ?>
+            </nav>
+        <?php endif; ?>
+    </div><!-- .wrap -->
+</footer><!-- #colophon -->
+</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
 
