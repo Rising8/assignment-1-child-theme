@@ -146,6 +146,7 @@ get_header(); ?>
 </div><!-- .wrap -->
 
 <script>
+    /* This is the javascript code for when you click on each individual events/tournaments to show more details */
     /* Toggles visibility of event details when the button is clicked */
     function toggleEventDetails(button) 
     {
